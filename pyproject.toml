@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cosmos-visualizer"
+version = "0.1.0"
+description = "A cinematic, music-reactive 3D Big Bang visualizer for Linux"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Cosmos contributors" }]
+dependencies = ["numpy>=1.26", "panda3d>=1.10.14", "SoundCard>=0.4.3"]
+
+[project.scripts]
+cosmos = "cosmos.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
